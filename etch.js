@@ -1,7 +1,8 @@
 const container = document.querySelector("#container");
-
-for (i=0;i<16;i++){
-    for (j=0;j<16;j++){
+let k = 16;
+let l = 16;
+for (i=0;i<k;i++){
+    for (j=0;j<l;j++){
         const div = document.createElement("div");
         div.classList="pix";
         container.appendChild(div);
