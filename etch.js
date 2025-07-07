@@ -1,3 +1,6 @@
+let iDraw=false;
+
+//initial Grid
 const container = document.querySelector("#container");
 let k = 16;
 function makeNew(k){
@@ -12,11 +15,26 @@ function makeNew(k){
     }
 }
 }
+makeNew(k);
+
+
+//New Grid
 const newG = document.querySelector("#newGrid");
-newG.addEventListener("click", getNewGrid);
+newG.addEventListener('click', getNewGrid);
 function getNewGrid(){
     k=prompt("Inter the size of the Grid: ");
     makeNew(k);
     return k; 
 }
-makeNew(k);
+
+//Clear Grid
+const clr = document.querySelector("#clear");
+clr.addEventListener('click',()=>{ makeNew(k)});
+
+//draw
+const canv = document.querySelector("#container");
+canv.addEventListener('mousedown', ()=> {iDraw=true});
+canv.addEventListener('mouseover', (e)=>{
+    if(iDraw ){
+        e.target.style.backgroundColor="red"}});
+canv.addEventListener('mouseup', ()=>{iDraw=false});

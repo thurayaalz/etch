@@ -8,15 +8,21 @@
     background-color: whitesmoke;
 
 }
+/*
 .pix:hover{
     background-color: red;
     transition: 0s;
 }
-
+*/
 #container{
     display:grid;
     width: 960px;
     height:100%;
+}
+.nob{
+    display: flex;
+    justify-content: center;
+
 }
 body{
     width: 99%;
@@ -28,10 +34,20 @@ align-items: center;
 }
 button{
 
-    margin: auto;
+    margin: 8px;
     background-color: darkcyan;
     color: orange;
     padding: 10px;
     width: 120px;
     border: none;
+    font-size: 20px;
+    border-radius: 15%;
+}
+button:hover{
+    background-color: brown;
+    color: darkcyan;
+    transition: 1s;
+}
+h1{
+    color: brown;
 }
