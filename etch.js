@@ -1,4 +1,6 @@
 let iDraw=false;
+let iRGB=false;
+let Rgb = "rgb(255, 0, 0)";
 
 //initial Grid
 const container = document.querySelector("#container");
@@ -8,13 +10,11 @@ function makeNew(k){
     container.style.gridTemplateColumns = `repeat(${k}, 1fr)`;
 
     for (i=0;i<k;i++){
-    for (j=0;j<k;j++){
-        const div = document.createElement("div");
-        div.classList="pix";
-        container.appendChild(div);
-    }
-}
-}
+        for (j=0;j<k;j++){
+            const div = document.createElement("div");
+            div.classList="pix";
+            container.appendChild(div);
+        }}}
 makeNew(k);
 
 
@@ -35,6 +35,23 @@ clr.addEventListener('click',()=>{ makeNew(k)});
 const canv = document.querySelector("#container");
 canv.addEventListener('mousedown', ()=> {iDraw=true});
 canv.addEventListener('mouseover', (e)=>{
-    if(iDraw ){
-        e.target.style.backgroundColor="red"}});
-canv.addEventListener('mouseup', ()=>{iDraw=false});
+    if(iDraw  && !iRGB){
+        e.target.style.backgroundColor=Rgb}
+    else if(iDraw && iRGB ){
+        Rgb = getRGB()
+        e.target.style.backgroundColor=Rgb}
+
+});
+document.addEventListener('mouseup', ()=>{iDraw=false});
+
+function getRGB() {
+        const r = Math.floor(Math.random() * 256); // 0–255
+        const g = Math.floor(Math.random() * 256);
+        const b = Math.floor(Math.random() * 256);
+        Rgb =`rgb(${r}, ${g}, ${b})`;
+        return  Rgb;
+      }
+
+const Rain = document.querySelector("#Rainbow");
+Rain.addEventListener('click', ()=>{iRGB=true});
+
