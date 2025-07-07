@@ -1,10 +1,11 @@
 const container = document.querySelector("#container");
 let k = 16;
-let l = 16;
-function makeNew(k,l){
+function makeNew(k){
     container.innerHTML = "";
+    container.style.gridTemplateColumns = `repeat(${k}, 1fr)`;
+
     for (i=0;i<k;i++){
-    for (j=0;j<l;j++){
+    for (j=0;j<k;j++){
         const div = document.createElement("div");
         div.classList="pix";
         container.appendChild(div);
@@ -14,9 +15,8 @@ function makeNew(k,l){
 const newG = document.querySelector("#newGrid");
 newG.addEventListener("click", getNewGrid);
 function getNewGrid(){
-    k=prompt("Inter the width of the Grid: ");
-    l=prompt("Inter the height of the Grid: ");
-    makeNew(k,l);
-    return k,l; 
+    k=prompt("Inter the size of the Grid: ");
+    makeNew(k);
+    return k; 
 }
-makeNew(k,l)
+makeNew(k);

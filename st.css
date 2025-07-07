@@ -1,7 +1,11 @@
 .pix{
-    border: 1px darkgray solid;
-    display: grid;
+    border: 0.1px black solid;
     transition: 2s;
+    aspect-ratio: 1/1;
+    padding: 5px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    background-color: whitesmoke;
 
 }
 .pix:hover{
@@ -11,7 +15,23 @@
 
 #container{
     display:grid;
-    grid-template-columns: repeat(16, 1fr);
-       width: 100%;
-    height:1000px;
+    width: 960px;
+    height:100%;
+}
+body{
+    width: 99%;
+align-items: center;
+    justify-items: center;
+    justify-content: center;
+    background-color: darkgray;
+    align-content: center;
+}
+button{
+
+    margin: auto;
+    background-color: darkcyan;
+    color: orange;
+    padding: 10px;
+    width: 120px;
+    border: none;
 }
