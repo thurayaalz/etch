@@ -1,5 +1,5 @@
 .pix{
-    border: 0.1px black solid;
+    border: 0.1px lightgray solid;
     transition: 2s;
     aspect-ratio: 1/1;
     padding: 5px;
@@ -15,11 +15,13 @@
 }
 */
 #container{
+    box-shadow: 10px 5px 15px rgba(0, 0, 0, 0.2);
     display:grid;
-    width: 960px;
-    height:100%;
+    width: 700px;
+    height:700px;
 }
 .nob{
+    margin-top: -15px;
     display: flex;
     justify-content: center;
 
@@ -29,16 +31,17 @@ body{
 align-items: center;
     justify-items: center;
     justify-content: center;
-    background-color: darkgray;
+    background-color: #666;
     align-content: center;
 }
 button{
 
-    margin: 8px;
+    margin: -8px;
     background-color: darkcyan;
     color: orange;
     padding: 10px;
-    width: 120px;
+    width: 180px;
+    height:50px;
     border: none;
     font-size: 20px;
     border-radius: 15%;
@@ -49,5 +52,5 @@ button:hover{
     transition: 1s;
 }
 h1{
-    color: brown;
+    color: rgb(220, 162, 53);
 }

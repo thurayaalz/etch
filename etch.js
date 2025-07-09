@@ -12,7 +12,7 @@ function makeNew(k){
     for (i=0;i<k;i++){
         for (j=0;j<k;j++){
             const div = document.createElement("div");
-            div.classList="pix";
+            div.classList.add("pix");
             container.appendChild(div);
         }}}
 makeNew(k);
@@ -53,5 +53,5 @@ function getRGB() {
       }
 
 const Rain = document.querySelector("#Rainbow");
-Rain.addEventListener('click', ()=>{iRGB=true});
+Rain.addEventListener('click', ()=>{iRGB=!iRGB});
 
